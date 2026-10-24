@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cakora — cakes, muffins, bakery treats and cafe favourites in Gaurakshini, Sasaram, Rohtas, Bihar, near Bank of Baroda.">
+  <title>Cakora | Cakes, Muffins & Café — Sasaram</title>
+  <style>
+    :root{--cream:#fbf5eb;--pink:#e8d5bd;--berry:#583722;--brown:#38271d;--gold:#c49a68;--muted:#79695b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:var(--brown)}
+    a{color:inherit}.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;gap:20px;background:#fbf5eb;position:sticky;top:0;z-index:10;border-bottom:1px solid #f0e2d9}
+    .logo{font-family:Georgia,serif;font-weight:800;font-size:1.8rem;letter-spacing:.04em;color:var(--berry);text-decoration:none;font-style:italic}.logo span{color:var(--gold)}
+    nav{display:flex;gap:24px;flex-wrap:wrap}nav a{text-decoration:none;font-size:.94rem;font-weight:650}nav a:hover{color:var(--berry)}
+    .btn{display:inline-block;background:var(--berry);color:#fff;text-decoration:none;border-radius:999px;padding:13px 21px;font-weight:750;border:0;cursor:pointer}.btn.alt{background:#fff;color:var(--berry);border:1px solid #e7c8cf}
+    .hero{padding:78px 7% 70px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px;background:radial-gradient(circle at 85% 20%,#ead8c0 0,transparent 32%),linear-gradient(135deg,#fbf5eb,#e9d7c2)}
+    .eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.78rem;color:var(--berry);font-weight:800}.hero h1{font-family:Georgia,serif;font-size:clamp(3rem,6vw,5.5rem);line-height:.98;margin:18px 0}.hero h1 em{color:var(--berry);font-weight:500}.hero p{font-size:1.12rem;line-height:1.8;color:var(--muted);max-width:570px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+    .cake-art{min-height:360px;border-radius:32px;background:linear-gradient(145deg,#b58a63,#ead8c0);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 22px 60px #7b294620}
+    .cake-art:before,.cake-art:after{content:"";position:absolute;border-radius:50%;background:#fff5e9aa}.cake-art:before{width:290px;height:290px;top:-90px;right:-70px}.cake-art:after{width:190px;height:190px;bottom:-80px;left:-40px}
+    .cake-emoji{font-size:clamp(8rem,18vw,14rem);filter:drop-shadow(0 16px 8px #7b294626);z-index:1}.sticker{position:absolute;right:24px;bottom:24px;background:#fffaf4;padding:13px 17px;border-radius:18px;font-family:Georgia,serif;font-size:1.1rem;transform:rotate(-5deg);z-index:2}
+    section{padding:74px 7%}.section-head{text-align:center;max-width:700px;margin:0 auto 36px}.section-head h2{font-family:Georgia,serif;font-size:clamp(2.2rem,4vw,3.4rem);margin:10px 0}.section-head p{color:var(--muted);line-height:1.7}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #f0e1d9;border-radius:24px;padding:28px;box-shadow:0 10px 30px #4b282408}.card .emoji{font-size:2.8rem}.card h3{font-family:Georgia,serif;font-size:1.5rem;margin:15px 0 8px}.card p{color:var(--muted);line-height:1.65;margin:0}
+    .about{background:#eee0cf;display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}.about-art{min-height:280px;border-radius:28px;background:linear-gradient(135deg,#765039,#dfc5a5);display:grid;place-items:center;font-size:7rem}.about h2{font-family:Georgia,serif;font-size:clamp(2.3rem,4vw,3.5rem);margin:12px 0}.about p{line-height:1.8;color:#6c5550}
+    .visit{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}.visit-info{background:#fff;border:1px solid #f0e1d9;padding:30px;border-radius:24px}.visit-info h3{font-family:Georgia,serif;font-size:1.7rem;margin-top:0}.visit-info p{line-height:1.7;color:var(--muted)}.map{border:0;width:100%;min-height:330px;border-radius:24px;background:#f0e5dc}
+    .notice{font-size:.88rem;color:var(--muted);margin-top:18px}.review-box{background:var(--berry);color:white;border-radius:28px;padding:36px;text-align:center}.review-box h2{font-family:Georgia,serif;font-size:2.4rem;margin:0 0 12px}.review-box p{line-height:1.7;color:#f3e3d1;max-width:720px;margin:0 auto 22px}
+    footer{padding:28px 7%;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#38271d;color:#fbf1e4}footer small{color:#d9c7b4}
+    @media(max-width:800px){.topbar{align-items:flex-start;flex-direction:column}nav{gap:14px}.hero,.about,.visit{grid-template-columns:1fr}.hero{padding-top:52px}.cake-art{min-height:270px}.cards{grid-template-columns:1fr}.about-art{min-height:220px}section{padding:55px 6%}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#home" aria-label="Cakora home">♧ Cakora<span>.</span><small style="display:block;font:600 .62rem system-ui;letter-spacing:.08em;color:#79695b;text-align:center;margin-top:-4px">CAKES · MUFFINS · CAFÉ</small></a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">Our treats</a><a href="#about">Our story</a><a href="#visit">Find us</a>
+    </nav>
+    <a class="btn" href="tel:+917857978280">Call Cakora</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">A little sweetness in Sasaram</div>
+        <h1>Made for<br><em>your happy</em><br>moments.</h1>
+        <p>Welcome to Cakora — your neighbourhood stop for cakes, muffins, bakery favourites and relaxed café moments in Gaurakshini, Sasaram.</p>
+        <div class="actions">
+          <a class="btn" href="#menu">Explore our treats</a>
+          <a class="btn alt" target="_blank" rel="noopener" href="https://share.google/kZJXneQ3xGAg0no6H">Get directions ↗</a>
+        </div>
+      </div>
+      <div class="cake-art" role="img" aria-label="Decorative cake illustration">
+        <div class="cake-emoji">🎂</div><div class="sticker">Baked with joy ♡</div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-head">
+        <div class="eyebrow">A treat for every mood</div>
+        <h2>Something sweet is waiting.</h2>
+        <p>From celebrations to everyday cravings, drop in and discover your Cakora favourites.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="emoji">🎂</div><h3>Celebration Cakes</h3><p>Make birthdays, milestones and little wins feel extra special with a cake made for the moment.</p></article>
+        <article class="card"><div class="emoji">🧁</div><h3>Muffins & Cupcakes</h3><p>Small, delightful treats for a quick pick-me-up or something sweet to share.</p></article>
+        <article class="card"><div class="emoji">🥐</div><h3>Bakery & Café Favourites</h3><p>Explore bakery bites and café treats for a relaxed break with friends or family.</p></article>
+      </div>
+      <p class="notice" style="text-align:center">Menu items and availability may vary. Contact or visit the café to confirm today's selection.</p>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-art" aria-hidden="true">☕</div>
+      <div>
+        <div class="eyebrow">The Cakora feeling</div>
+        <h2>Good treats.<br>Good company.</h2>
+        <p>Cakora brings together the joy of bakery treats and the comfort of a neighbourhood café. Whether you're picking up a cake, grabbing a muffin or meeting someone for a café break, we look forward to welcoming you.</p>
+        <a class="btn" href="#visit">Come say hello</a>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="section-head">
+        <div class="eyebrow">Come find us</div>
+        <h2>Your next sweet stop.</h2>
+        <p>Find Cakora around Gaurakshini, Sasaram, near Bank of Baroda.</p>
+      </div>
+      <div class="visit">
+        <div class="visit-info">
+          <h3>Cakora Café & Bakery</h3>
+          <p><strong>Area:</strong><br>Gaurakshini, Sasaram, Rohtas, Bihar, India</p>
+          <p><strong>Landmark:</strong><br>Near Bank of Baroda (BOB), Gaurakshini</p>
+          <p><strong>What you'll find:</strong><br>Cakes, muffins, bakery items and café treats</p>
+          <p><strong>Phone:</strong><br><a href="tel:+917857978280">+91 78579 78280</a></p>
+          <p><strong>Instagram:</strong><br><a target="_blank" rel="noopener" href="https://www.instagram.com/Cakora-brandofcake/">@Cakora-brandofcake</a></p>
+          <a class="btn" target="_blank" rel="noopener" href="https://share.google/kZJXneQ3xGAg0no6H">Open in Google Maps ↗</a>
+          <p><a class="btn alt" href="tel:+917857978280">Call +91 78579 78280</a></p>
+          <p><a target="_blank" rel="noopener" href="https://share.google/kZJXneQ3xGAg0no6H">Open Cakora’s exact Google Maps location ↗</a></p>
+          <p class="notice">Please verify the exact pin, opening hours and contact details before publishing this page.</p>
+        </div>
+        <iframe class="map" title="Map search for Cakora in Gaurakshini, Sasaram" loading="lazy" allowfullscreen
+          src="https://maps.google.com/maps?q=24.960814%2C84.015998&z=16&output=embed"></iframe>
+      </div>
+    </section>
+
+    <section>
+      <div class="review-box">
+        <h2>Visited Cakora? Share your experience.</h2>
+        <p>Your honest feedback helps local customers discover the café and helps the team keep improving. If you have a Google Business Profile listing, use the link below to find it and leave a genuine review.</p>
+        <a class="btn alt" target="_blank" rel="noopener" href="https://share.google/kZJXneQ3xGAg0no6H">Find Cakora on Google Maps ↗</a>
+        <p style="margin-top:14px"><a style="color:#fff" target="_blank" rel="noopener" href="https://www.instagram.com/Cakora-brandofcake/">Follow @Cakora-brandofcake on Instagram</a></p>
+      </div>
+    </section>
+
+    <section id="google-business">
+      <div class="section-head">
+        <div class="eyebrow">Find Cakora</div>
+        <h2>Cakora Café &amp; Bakery on Google Maps</h2>
+        <p>Visit us in Gaurakshini, Sasaram, near Bank of Baroda. Use the map link below to open the location pin.</p>
+      </div>
+      <div class="visit">
+        <div class="visit-info">
+          <h3>Cakora — Café &amp; Bakery</h3>
+          <p><strong>Address:</strong><br>Gaurakshini, Sasaram, Rohtas, Bihar, India</p>
+          <p><strong>Landmark:</strong><br>Near Bank of Baroda, Gaurakshini</p>
+          <p><strong>Map coordinates:</strong><br>24.960814, 84.015998</p>
+          <p><strong>Phone:</strong><br><a href="tel:+917857978280">+91 78579 78280</a></p>
+          <p><strong>Instagram:</strong><br><a target="_blank" rel="noopener" href="https://www.instagram.com/Cakora-brandofcake/">@Cakora-brandofcake</a></p>
+          <a class="btn" target="_blank" rel="noopener" href="https://share.google/kZJXneQ3xGAg0no6H">Get directions on Google Maps ↗</a>
+          <p class="notice">Google Business Profile setup and verification are handled by Google. This website does not itself create or verify a business listing.</p>
+          <a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/business/">Create or manage Business Profile ↗</a>
+        </div>
+        <iframe class="map" title="Cakora map location at Gaurakshini, Sasaram" loading="lazy" allowfullscreen
+          src="https://maps.google.com/maps?q=24.960814%2C84.015998&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </section>
+
+    <section id="cakora-gallery">
+      <div class="section-head">
+        <div class="eyebrow">A glimpse of Cakora</div>
+        <h2>Welcome to Our Café</h2>
+        <p>Freshly baked happiness, warm café moments, and treats worth sharing.</p>
+      </div>
+      <div style="max-width:1000px;margin:0 auto">
+        <img src="cakora_storefront.png" alt="Cakora Bakery & Café storefront with warm lighting and bakery display"
+             style="display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 18px 45px #38271d22">
+        <p class="notice" style="text-align:center">Cakora Bakery &amp; Café storefront.</p>
+      </div>
+    </section>
+
+    <section id="cakora-google-qr">
+      <div class="section-head">
+        <div class="eyebrow">Find us online</div>
+        <h2>Scan to Find Cakora</h2>
+        <p>Scan the Google QR code to open the Cakora link on your phone.</p>
+      </div>
+      <div class="visit-info" style="max-width:620px;margin:0 auto;text-align:center">
+        <p>The QR code is provided in the accompanying PDF.</p>
+        <a class="btn" href="Cakora_GoogleQR_2026-10-24-151927.pdf" target="_blank" rel="noopener">Open Cakora Google QR PDF ↗</a>
+        <p class="notice">Keep the PDF in the same folder as this website file when uploading, so the QR link remains available.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong class="logo" style="color:#fff">♧ Cakora<span>.</span></strong><br><small>Cakes • Muffins • Bakery • Café</small></div>
+    <small>Gaurakshini, Sasaram, Rohtas, Bihar, India · +91 78579 78280 · @Cakora-brandofcake</small>
+    <small>© <span id="year">2026</span> Cakora. All rights reserved.</small>
+  </footer>
+</body>
+</html>
